@@ -9,7 +9,7 @@ function loginAdmin(event){
         if(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email) && pwd.replace(/ /g, "").length != 0){
             if(email == response.email && pwd == response.pwd){
                 localStorage.setItem("uid", response.uid)
-                window.location.href = '../busquedas.html?search=all'
+                window.location.href = './busquedas.html?search=all'
             }
             else{
                 if(!document.getElementById('warnAcces')){
