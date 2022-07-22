@@ -1,0 +1,325 @@
+.myheader{
+    background-color: var(--color1);
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    top: 0;
+    box-shadow: 0 0 10px var(--color0);
+    display: flex;
+    align-items: center;
+}
+
+.myheader .container{
+    overflow: visible;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-logo{
+    display: flex;
+    align-items: center;
+}
+
+.header-logo > h4{
+    padding: 5px 0 0 10px;
+    letter-spacing: 10px;
+    font-family: var(--font1);
+    color: var(--color3);
+    user-select: none;
+}
+
+.header-logo > img{
+    width: 55px;
+    display: block;
+    object-fit: cover;
+}
+
+.header-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap:20px;
+}
+
+.header-nav > a:hover{
+    background-color: var(--color3);
+    color: var(--color5);
+    border: 1.5px solid var(--color3);
+    box-shadow: 0 0  6px var(--color3);
+}
+
+.header-nav > a:visited:hover{
+    color: var(--color5);
+}
+
+.header-nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+}
+
+.header-nav-enlace{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: max-content;
+    height: 100%;
+}
+
+.header-nav-enlace > a{
+    color: var(--color3);
+    cursor: pointer;
+    display: block;
+    border: none;
+    text-align: center;
+}
+
+.header-nav-enlace > .borde{
+    position: absolute;
+    background-color: var(--color3);
+    width: 0%;
+    height: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 20px;
+}
+
+.header-nav-enlace:hover > .borde{
+    width: 100%;
+    transition: width 0.3s;
+}
+
+.header-nav-lupa{
+    padding: 6px;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+.header-nav-lupa:hover{
+    animation: shadow 0.1s forwards;
+}
+
+@keyframes shadow {
+    0%{
+        box-shadow: -2px 0 2px #32181371;
+        background: linear-gradient(90deg, rgba(115,59,47,1) 0%, rgba(50,24,19,1) 100%);
+    }
+
+    100%{
+        box-shadow: 2px 0 2px #32181371;
+        background: linear-gradient(90deg, rgba(50,24,19,1) 0%, rgba(115,59,47,1) 100%);
+    }
+}
+
+.header-nav-lupa > img{
+    width: 15px;
+    display: block;
+    object-fit: cover;
+}
+
+#form-buscador, #form-buscador-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color1);
+    border-radius: 5px;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    padding: 5px;
+    height: max-content;
+    gap: 5px;
+    z-index: 100;
+}
+
+#form-buscador > input, #form-buscador-mobile > input{
+    padding: 8px;
+    font-family: var(--font2);
+    color: var(--color3);
+    background-color: var(--color1);
+    border: none;
+    border-bottom: 1px solid var(--color3);
+}
+
+#form-buscador > input::placeholder, #form-buscador-mobile > input::placeholder{
+    font-family: var(--font2);
+    color: var(--color3);
+    opacity: 0.3;
+}
+
+#form-buscador > input:focus, #form-buscador-mobile > input:focus{
+    outline: none;
+}
+
+#form-buscador > button, #form-buscador-mobile > button{
+    color: var(--color3);
+    background-color: var(--color4);
+    border: none;
+    padding: 8px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#form-buscador > button:hover, #form-buscador-mobile > button:hover{
+    box-shadow: 0 0 6px var(--color4);
+}
+
+.carrito{
+    padding: 6px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+
+.carrito > img{
+    width: 15px;
+    object-fit: cover;
+    display: block;
+    overflow: hidden;
+}
+
+.carrito:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 6px var(--color0);
+    transition: transform 0.2s;
+}
+
+.carrito > p{
+    width: 6px;
+    height: 6px;
+    font-size: 8px;
+    position: absolute;
+    top: -2px;
+    left: 15px;
+    background-color: #ff0000;
+    padding: 4px;
+    border-radius: 100px;
+    text-align: center;color: #FFF;
+}
+
+.product-list{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    width: 100%;
+}
+
+.product-list > a{
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+}
+
+.product-list > a:hover{
+    background-color: var(--color0);
+}
+
+.header-nav-enlace:nth-child(2):hover > .product-list{
+    display: flex;
+}
+
+.product-list:hover{
+    display: flex;
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .header-logo {
+        flex-direction: column;
+    }
+    .header-logo > h4 {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .header-logo {
+        flex-direction: column;
+    }
+    .header-logo > h4 {
+        font-size: 14px;
+    }
+    .header-nav{
+        display: none;
+        justify-content: flex-end;
+        gap: 40px;
+    }
+    .mobile{
+        display: flex;
+    }
+    .btn-menu-mobile{
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .btn-menu-mobile > img{
+        width: 25px;
+        position: relative;
+        cursor: pointer;
+    }
+    .header-nav-links{
+        background-color: var(--color1);
+        flex-direction: column;
+        position: absolute;
+        width: max-content;
+        height: max-content;
+        right: 0;
+        bottom: -165px;
+    }
+    .btn-menu-mobile > img{
+        width: 25px;
+        position: relative;
+    }
+    .header-nav-enlace{
+        padding: 10px;
+    }
+    .product-list{
+        top: 10px;
+        right: 135px;
+        left: auto;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .myheader {
+        background-color: var(--color1);
+        height: 120px;
+    }
+    .myheader .container{
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 20px;
+        height: auto;
+    }
+    .header-nav {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    #form-buscador-mobile {
+        bottom: -55px;
+        left: 0;
+        right: auto;
+    }
+}

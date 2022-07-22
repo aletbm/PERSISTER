@@ -1,0 +1,98 @@
+:root{
+    --color0:#321813;
+    --color1:#733B2F;
+    --color2:#A67041;
+    --color3:#D9CCB4;
+    --color4:#818C88;
+    --color5:#121526;
+    --font1: 'Russo One', serif;
+    --font2: 'Quicksand', arial;
+    --background_color: #000;
+    --time: 40s;
+    --dist1: 175px;
+    --dist2: 165px;
+    --dist3: 125px;
+    --dist4: 110px;
+}
+
+body{
+    background-color: var(--color5);
+    margin: 0;
+    font-family: var(--font2)
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+h5{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+p{  
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.container{
+    width: 90%;
+    height: min-content;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.no-visible{
+    display: none !important;
+}
+
+a{
+    font-size: 12px;
+    padding: 5px;
+    letter-spacing: 3px;
+    border: 1.5px solid var(--color3);
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    width: max-content;
+}
+
+a:visited{
+    color: var(--color3);
+}
+
+a:link{
+    text-decoration: none;
+    color: var(--color3);
+}
+
+.mymain{
+    margin-top:60px;
+}
+
+@media screen and (max-width:550px) {
+    .mymain {
+        margin-top: 120px;
+    }
+}

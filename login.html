@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo/logo.svg" type="image/x-icon">
+    <title>PERSISTER</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header/header.css">
+    <link rel="stylesheet" href="./css/main/contacto.css">
+    <link rel="stylesheet" href="./css/footer/footer.css">
+    <link rel="stylesheet" href="./css/main/login.css">
+</head>
+
+<body>
+    <header class="myheader">
+        <div class="container">
+            <div class="header-logo">
+                <img src="./img/logo/logo.svg" alt="Logo">
+                <h4>PERSISTER</h4>
+            </div>
+            <div class="header-nav">
+                <nav class="header-nav-links">
+                    <div class="header-nav-enlace">
+                        <a href="./index.html">INICIO</a>
+                        <div class="borde"></div>
+                    </div>
+                    <div class="header-nav-enlace">
+                        <a>PRODUCTOS</a>
+                        <div class="borde"></div>
+                        <div class="product-list">
+                            <a href="./busquedas.html?search=buzos">BUZOS</a>
+                            <a href="./busquedas.html?search=pantalones">PANTALONES</a>
+                            <a href="./busquedas.html?search=accesorios">ACCESORIOS</a>
+                            <a href="./busquedas.html?search=camisas">CAMISAS</a>
+                            <a href="./busquedas.html?search=remeras">REMERAS</a>
+                        </div>
+                    </div>
+                    <div class="header-nav-enlace">
+                        <a href="./index.html#contacto">CONTACTANOS</a>
+                        <div class="borde"></div>
+                    </div>
+                </nav>
+                <div class="header-nav-lupa">
+                    <img src="./img/lupa.svg" alt="">
+                </div>
+                <form action="" class="no-visible" id="form-buscador">
+                    <input type="text" name="buscador" id="buscador" placeholder="¿Que deseas buscar?">
+                    <button type="submit">BUSCAR</button>
+                </form>
+                <div class="carrito">
+                    <img src="./img/carrito.png" alt="">
+                    <p>0</p>
+                </div>
+            </div>
+            <div class="header-nav mobile">
+                <div class="header-nav-lupa">
+                    <img src="./img/lupa.svg" alt="">
+                </div>
+                <form action="" class="no-visible" id="form-buscador-mobile">
+                    <input type="text" name="buscador" id="buscador-mobile" placeholder="¿Que deseas buscar?">
+                    <button type="submit">BUSCAR</button>
+                </form>
+                <div class="carrito">
+                    <img src="./img/carrito.png" alt="">
+                    <p>0</p>
+                </div>
+                <div class="btn-menu-mobile">
+                    <img src="./img/menu.png" alt="" id="btnMobile">
+                </div>
+                
+            </div>
+        </div>
+        <nav class="header-nav-links mobile no-visible" id="linksMobile">
+            <div class="header-nav-enlace">
+                <a href="./index.html">INICIO</a>
+            </div>
+            <div class="header-nav-enlace">
+                <a>PRODUCTOS</a>
+                <div class="product-list">
+                    <a href="./busquedas.html?search=buzos">BUZOS</a>
+                    <a href="./busquedas.html?search=pantalones">PANTALONES</a>
+                    <a href="./busquedas.html?search=accesorios">ACCESORIOS</a>
+                    <a href="./busquedas.html?search=camisas">CAMISAS</a>
+                    <a href="./busquedas.html?search=remeras">REMERAS</a>
+                </div>
+            </div>
+            <div class="header-nav-enlace">
+                <a href="./index.html#contacto">CONTACTANOS</a>
+            </div>
+        </nav>
+    </header>
+    <main class="mymain">
+        <section class="login">
+            <div class="container">
+                <h4>Iniciar Sesion</h4>
+                <form class="form-login" data-form>
+                    <div class="persister-input">
+                        <input type="text" name="email" id="email" required autocomplete="off"><label
+                            for="email">EMAIL</label>
+                    </div>
+                    <div class="persister-input">
+                        <input type="password" name="pwd" id="pwd" required autocomplete="off"><label
+                            for="pwd">CONTRASEÑA</label>
+                    </div>
+                    <input id="btnLogin" class="persister-input-btn" type="submit" value="ENTRAR">
+                </form>
+            </div>
+        </section>
+
+        
+    </main>
+    <footer class="myfooter">
+        <div class="container">
+            <nav>
+                <div class="enlace-footer"><a href="">Quienes somos</a>
+                    <div class="line"></div>
+                </div>
+                <div class="enlace-footer"><a href="">Politica de privacidad</a>
+                    <div class="line"></div>
+                </div>
+                <div class="enlace-footer"><a href="">Programa de fidelidad</a>
+                    <div class="line"></div>
+                </div>
+                <div class="enlace-footer"><a href="">Nuestras tiendas</a>
+                    <div class="line"></div>
+                </div>
+                <div class="enlace-footer"><a href="">Quiero ser franquiciado</a>
+                    <div class="line"></div>
+                </div>
+                <div class="enlace-footer"><a href="">Anúncie aqui</a>
+                    <div class="line"></div>
+                </div>
+            </nav>
+            <div class="separador"></div>
+            <div class="designer">
+                <h4>Diseñado por Alexander D. Rios</h4>
+                <img src="./img/logo/firma.svg" alt="">
+            </div>
+            <div class="separador"></div>
+            <div class="redes">
+                <h5>Mis redes</h5>
+                <div class="links">
+                    <a href="https://www.linkedin.com/in/alexander-daniel-rios/"><img src="./img/redes/linkedin.svg"
+                            alt=""></a>
+                    <a href="https://www.instagram.com/alexander.rios.75470/"><img src="./img/redes/instagram.svg"
+                            alt=""></a>
+                    <a href="https://github.com/aletbm"><img src="./img/redes/github.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/nav_search.js" type="module"></script>
+    <script src="./js/login.js" type="module"></script>
+</body>
+</html>

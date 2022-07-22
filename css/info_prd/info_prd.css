@@ -1,0 +1,287 @@
+.info-prd{
+    padding-top: 30px;
+}
+
+.info-prd > .container{
+    background-color: var(--color2);
+    color: var(--color3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto auto 30px auto
+}
+
+.info-prd > .container > h4{
+    text-align: center;
+    margin-top: 20px;
+}
+.info-prd > .container > p{
+    text-align: center;
+}
+
+.form-info-prd{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.persister-input-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.persister-input-info > input{
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.persister-input-info > label{
+    width: 100%;
+    top: 5px;
+    white-space: nowrap;
+}
+
+.persister-select{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.persister-select > label{
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.persister-select > select{
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
+    color: var(--color3);
+    -webkit-appearance: var(--color3);
+    text-align: center;
+    padding: 5px;
+    width: 70%;
+    font-family: var(--font2);
+}
+
+.persister-select > select:focus{
+    outline: none;
+    border-radius: 5px;
+    transition: border-radius 0.5s;
+}
+
+.persister-textarea{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 30px;
+}
+
+.persister-textarea > label{
+    letter-spacing: 10px;
+    margin-bottom: 10px;
+}
+
+.persister-textarea > textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    border: 1px solid var(--color3);
+    background-color: var(--color1);
+    color: var(--color3);
+    padding: 10px;
+    font-family: var(--font2);
+}
+
+.persister-textarea > textarea:focus{
+    outline: none;
+    border-radius: 5px;
+    transition: border-radius 0.5s;
+}
+
+.persister-textarea > textarea::placeholder{
+    font-family: var(--font2);
+    color: var(--color3);
+    opacity: 0.5;
+}
+
+.price-cantidad{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px  
+}
+
+.persister-number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px
+}
+
+.persister-number > label{
+    letter-spacing: 5px;
+}
+
+.persister-number > input{
+    font-family: var(--font2);
+    width: 50%;
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
+    color: var(--color3);
+    text-align: center;
+    padding: 2px 0;
+}
+
+.persister-number > input:focus{
+    outline: none;
+}
+
+.info-talles{
+    margin-top: 30px;
+    width: 90%;
+}
+
+.info-talles > p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+.talles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.talles > p{
+    text-align: center;
+    width: 40px;
+    background-color: var(--color1);
+    border: 1px solid var(--color3);
+    padding: 5px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.talle-activa{
+    background-color: var(--color3) !important;
+    color: var(--color0);
+    box-shadow: 0 0 6px var(--color3);
+}
+
+.form-info-prd > .persister-input-btn{
+    background-color: var(--color1);
+}
+
+.form-info-prd > .persister-input-btn:hover{
+    background-color: var(--color3);
+}
+
+#warnTitle, #warnUrl, #warnDesc, #warnPrice, #warnCantidad, #warnTalles{
+    color: var(--color5);
+    background-color: #ff3300;
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .persister-input > label {
+        letter-spacing: 5px;
+    }
+    .persister-select > label {
+        letter-spacing: 5px;
+    }
+    .persister-textarea > label {
+        letter-spacing: 5px;
+    }
+    .price-cantidad {
+        flex-direction: column;
+    }
+    .info-talles > p {
+        letter-spacing: 5px;
+    }
+    .talles {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .persister-input > label {
+        letter-spacing: 2px;
+    }
+    .persister-select > label {
+        letter-spacing: 2px;
+    }
+    .persister-textarea > label {
+        letter-spacing: 2px;
+    }
+    .persister-number > label {
+        letter-spacing: 2px;
+    }
+    .info-talles > p {
+        letter-spacing: 2px;
+    }
+    .persister-input-btn {
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .persister-input > label {
+        letter-spacing: 0;
+    }
+    .persister-select > label {
+        letter-spacing: 0;
+    }
+    .persister-textarea > label {
+        letter-spacing: 0;
+    }
+    .persister-number {
+        flex-direction: column;
+    }
+    .persister-number > label {
+        letter-spacing: 0;
+    }
+    .info-talles > p {
+        letter-spacing: 0;
+    }
+    .form-info-prd > .persister-input-btn {
+        width: min-content;
+        white-space: pre-line;
+    }
+    .persister-input-btn {
+        letter-spacing: 0;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .persister-input > label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .persister-input > label {
+        font-size: 11px;
+    }
+}

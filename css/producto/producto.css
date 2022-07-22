@@ -1,0 +1,229 @@
+.mymain{
+    display: flex;
+    flex-direction: column;
+}
+
+.busqueda-producto{
+    background-color: var(--color2);
+    padding: 30px;
+    margin: 30px 0 30px 0;
+    height: 500px;
+}
+
+.busqueda-producto > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.producto-img{
+    height: 100%;
+    flex-basis: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.producto-img > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+    background-color: #FFF;
+}
+
+.producto-info{
+    color: var(--color3);
+    background-color: var(--color1);
+    flex-basis: calc(45% - 20px);
+    padding: 30px;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.producto-info > h4{
+    padding-top: 20px;
+}
+
+.producto-info > p{
+    margin: 15px 0;
+    line-height: 13px;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+.producto-utils{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: var(--color0);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.producto-detalles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.producto-talles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.talles{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.talles > p{
+    text-align: center;
+    width: 30px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 100px;
+    user-select: none;
+    background-color: var(--color0);
+    border: 1px solid var(--color3);
+}
+
+.talles > p:hover{
+    background-color: var(--color3);
+    color: var(--color1);
+    box-shadow: 0 0 6px var(--color3);
+    cursor: pointer;
+}
+
+.producto-cantidad{
+    margin: 5px 0;
+}
+
+.producto-cantidad > label{
+    font-size: 12px;
+}
+
+.producto-cantidad > input{
+    font-family: var(--font2);
+    background-color: var(--color0);
+    border: 1px solid var(--color3);
+    color: var(--color3);
+    border-radius: 5px;
+    padding: 3px 5px;
+    width: 45px;
+    margin-left: 10px;
+}
+
+.producto-cantidad > input:focus{
+    outline: none;
+}
+
+.producto-metodospago{
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.metodospago-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+}
+
+.metodospago-img > img{
+    width: 30px;
+    object-fit: cover;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.producto-carrito{
+    align-self: flex-end;
+    letter-spacing: 3px;
+    width: max-content;
+    border: 1px solid var(--color3);
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 12px;
+}
+
+.producto-carrito:hover{
+    background-color: var(--color3);
+    color: var(--color1);
+    box-shadow: 0 0 6px var(--color3);
+    cursor: pointer;
+}
+
+.btn-editar{
+    margin-top: 20px;
+    margin-right: 20px;
+    align-self: flex-end;
+}
+
+.btn_edit:hover {
+    color: var(--color5);
+    background-color: var(--color3);
+    box-shadow: 0 0 6px var(--color3);
+}
+
+.talle-activa{
+    background-color: var(--color3) !important;
+    color: var(--color0);
+    box-shadow: 0 0 6px var(--color3);
+}
+
+@media screen and (max-width: 700px) {
+    .busqueda-producto > .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .busqueda-producto {
+        height: 100%;
+    }
+    .producto-img {
+        width: 100%;
+    }
+    .producto-info {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .talles {
+        flex-wrap: wrap;
+    }
+    .producto-metodospago {
+        flex-wrap: wrap;
+    }
+    .metodospago-img{
+        flex-wrap: wrap;
+        margin-left: 0;
+        justify-content: space-evenly;
+    }
+    .producto-carrito {
+        width: min-content;
+        text-align: center;
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 260px){
+    .producto-utils {
+        text-align: center;
+    }
+}
