@@ -87,6 +87,7 @@
     justify-content: space-around;
     align-items: center;
     margin-top: 5px;
+    gap:10px;
 }
 
 .talles > p{

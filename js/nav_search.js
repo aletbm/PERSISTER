@@ -51,3 +51,12 @@ function userSession(){
 }
 
 userSession()
+
+document.getElementById('form-buscador')[1].addEventListener('click', function(event){
+    event.preventDefault()
+    const busqueda = document.getElementById("buscador").value
+    if(busqueda.replace(/ /g, "").length == 0 || !/^[a-zA-Z0-9 ]*$/.test(busqueda)) return
+    else{
+        window.location.href = "./busquedas.html?searchName="+busqueda
+    }
+})

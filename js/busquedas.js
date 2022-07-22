@@ -1,14 +1,5 @@
 import { fetchData, URLsearch, deleteData} from "../services/getData.js"
-
-const categoria = URLsearch('search')
 const categorias = ['all', 'buzos', 'pantalones', 'accesorios', 'camisas', 'remeras']
-
-if (categoria == categorias[0]) {
-    document.getElementsByClassName("busqueda-titulo")[0].innerHTML = "Todos los productos"
-}
-else {
-    document.getElementsByClassName("busqueda-titulo")[0].innerHTML = categoria[0].toUpperCase() + categoria.slice(1, categoria.length)
-}
 
 function parseCard(categoria, nprd,src, title, description, price) {  
     return `<div class="producto-card" id="${categoria}_${nprd}">
@@ -41,24 +32,54 @@ const showResults = (categoria) => {
     }).catch(function (error) {
         console.log('Hubo un problema con la petición Fetch:' + error.message);
     });
-
 }
 
+function getFilteredByKey(array, key, value) {
+    return array.filter(function(e) {
+      if(e[key].toUpperCase().search(value.toUpperCase()) != -1) return e;
+    });
+  }
 
-if(categoria == 'all'){
-    for(let i = 1; i < categorias.length; i++){
-        showResults(categorias[i]) 
-    }
+const showNamePrd = (namePrd, categoria) => {
+    fetchData("/"+ categoria).then((response) => {
+        const encontrados = getFilteredByKey(response, "title", namePrd)
+        let cards = document.getElementsByClassName("productos-cards")[0]
+        for (let x = 0; x < encontrados.length; x++) {
+            cards.innerHTML += parseCard(categoria, encontrados[x].id, encontrados[x].url, encontrados[x].title, encontrados[x].description, encontrados[x].price)
+        }
+        return true
+    }).catch(function (error) {
+        console.log('Hubo un problema con la petición Fetch:' + error.message);
+    });
 }
-else{
-    let cat_valida = false
-    for (let m = 1; m < categorias.length; m++) {
-        if (categoria == categorias[m]) {
-            cat_valida = true
+
+const categoria = URLsearch('search')
+const namePrd = URLsearch('searchName')
+
+if(categoria != false){
+    if(categoria == 'all'){
+        document.getElementsByClassName("busqueda-titulo")[0].innerHTML = "Todos los productos"
+        for(let i = 1; i < categorias.length; i++){
+            showResults(categorias[i]) 
         }
     }
-    if (cat_valida == true) {
-        showResults(categoria)
+    else{
+        let cat_valida = false
+        for (let m = 1; m < categorias.length; m++) {
+            if (categoria == categorias[m]) {
+                cat_valida = true
+            }
+        }
+        if (cat_valida == true) {
+            document.getElementsByClassName("busqueda-titulo")[0].innerHTML = categoria[0].toUpperCase() + categoria.slice(1, categoria.length)
+            showResults(categoria)
+        }
+    }
+}
+else if(namePrd != false){
+    document.getElementsByClassName("busqueda-titulo")[0].innerHTML = "Resultados de buscar: '"+namePrd+"'"
+    for (let m = 1; m < categorias.length; m++) {
+        showNamePrd(namePrd, categorias[m])
     }
 }
 

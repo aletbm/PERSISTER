@@ -68,6 +68,12 @@
     
 }
 
+@media screen and (max-width: 550px) {
+    .login {
+        margin-top: 150px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .form-login {
         width: 90%;

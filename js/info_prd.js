@@ -56,7 +56,7 @@ document.querySelector('[data-form]').addEventListener('submit', function (event
     if(document.getElementById('warnCantidad')) document.getElementById('warnCantidad').remove()
     if(document.getElementById('warnTalles')) document.getElementById('warnTalles').remove()
     
-    if(name_prd.replace(/ /g, "").length == 0){
+    if(name_prd.replace(/ /g, "").length == 0 || !/^[a-zA-Z0-9 ]*$/.test(name_prd)){
         const p = document.createElement('p')
         p.innerHTML = "Ingrese un nombre para su producto."
         p.id = "warnTitle"
@@ -72,7 +72,7 @@ document.querySelector('[data-form]').addEventListener('submit', function (event
         return
     }
 
-    if(description.replace(/ /g, "").length == 0){
+    if(description.replace(/ /g, "").length == 0  || !/^[a-zA-Z0-9 ]*$/.test(name_prd)){
         const p = document.createElement('p')
         p.innerHTML = "Ingrese una descripcion de su producto."
         p.id = "warnDesc"
