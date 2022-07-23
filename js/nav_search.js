@@ -38,9 +38,15 @@ function userSession(){
         const uid = localStorage.getItem("uid")
         if(uid == response.uid){
            const btn = document.querySelector('[data-login]')
+           const btnMobile = document.querySelector('[data-loginMobile]')
            btn.innerHTML = "CERRAR SESION"
            btn.href = "./index.html"
            btn.addEventListener("click", () => {
+            localStorage.removeItem("uid")
+           })
+           btnMobile.innerHTML = "CERRAR SESION"
+           btnMobile.href = "./index.html"
+           btnMobile.addEventListener("click", () => {
             localStorage.removeItem("uid")
            })
         }

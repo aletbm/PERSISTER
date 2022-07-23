@@ -97,6 +97,9 @@
     .carrito-cards {
         width: 90%;
     }
+    .carrito-info{
+        margin-top: 150px;
+    }
 }
 
 @media screen and (max-width:450px) {
