@@ -66,3 +66,12 @@ document.getElementById('form-buscador').addEventListener('submit', function(eve
         window.location.href = "./busquedas.html?searchName="+busqueda
     }
 })
+
+document.getElementById('form-buscador.mobile').addEventListener('submit', function(event){
+    event.preventDefault()
+    const busqueda = document.getElementById("buscador-mobile").value
+    if(busqueda.replace(/ /g, "").length == 0 || !/^[a-zA-Z0-9 ]*$/.test(busqueda)) return
+    else{
+        window.location.href = "./busquedas.html?searchName="+busqueda
+    }
+})
