@@ -1,0 +1,46 @@
+.notification{
+    position: relative;
+    height: 100vh;
+}
+
+.notification > .container{
+    color: var(--color3);
+    text-align: center;
+    position: absolute;
+    background-color: var(--color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 30px;
+    width: 70%;
+    border-radius: 10px;
+}
+
+.notification-img{
+    width: 100px;
+    height: 100px;
+    display: block;
+
+}
+
+.notification-btns{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.notification-btns > a:hover{
+    background-color: var(--color1);
+    color: var(--color3);
+    border-color: var(--color1);
+    box-shadow: 0 0 6px var(--color1);
+}

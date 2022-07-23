@@ -125,8 +125,12 @@ document.querySelector('[data-form]').addEventListener('submit', function (event
     }
     else{
         postData("/" + categoria, payload).then(() => { 
+            window.location.href = "./notification.html?status=ok"
             return true 
-        }).catch( err => console.log(err))
+        }).catch( err => {
+            console.log(err)
+            window.location.href = "./notification.html?status=error "
+        })
     }
 
 })

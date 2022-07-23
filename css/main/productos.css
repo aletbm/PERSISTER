@@ -8,6 +8,10 @@
     margin-bottom: 30px;
 }
 
+.producto > p{
+    text-align: center;
+}
+
 .producto:first-child{
     margin-top: 30px;
 }
